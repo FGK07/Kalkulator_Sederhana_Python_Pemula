@@ -1,4 +1,13 @@
+import os
+
+def clear():
+    if os.name == "nt":
+        os.system("cls")
+    else:
+        os.system("clear")
+        
 def operator():
+    clear()
     print("Masukkan jenis operator:")
     print("1.Penjumlahan")
     print("2.Pengurangan")
@@ -7,7 +16,9 @@ def operator():
     print("5.Modulus")
     print("6.keluar")
     
+        
 def penjumlahan():
+    clear()
     angka1 = int(input("Masukkan Angka1: "))
     angka2 = int(input("Masukkan Angka2: "))
     hasil = angka1 + angka2
@@ -15,6 +26,7 @@ def penjumlahan():
     return hasil
 
 def pengurangan():
+    clear()
     angka1 = int(input("Masukkan Angka1: "))
     angka2 = int(input("Masukkan Angka2: "))
     hasil = angka1 - angka2
@@ -22,6 +34,7 @@ def pengurangan():
     return hasil
 
 def perkalian():
+    clear()
     angka1 = int(input("Masukkan Angka1: "))
     angka2 = int(input("Masukkan Angka2: "))
     hasil = angka1 * angka2
@@ -29,6 +42,7 @@ def perkalian():
     return hasil
 
 def pembagian():
+    clear()
     angka1 = int(input("Masukkan Angka1: "))
     angka2 = int(input("Masukkan Angka2: "))
     if angka1 == 0 or angka2 == 0:
@@ -39,6 +53,7 @@ def pembagian():
     return hasil
 
 def modulus():
+    clear()
     angka1 = int(input("Masukkan Angka1: "))
     angka2 = 2
     hasil = angka1 % angka2
@@ -115,6 +130,6 @@ while True:
             print("Pilihan tidak valid. Ulangi!")
         
     if pilihan == 6 :
+        clear()
         print("Anda telah keluar. Terima Kasih telah menggunakan program kalkulator sederhana ini.")
         break
-    
